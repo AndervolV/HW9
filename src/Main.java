@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
 //Задача 1
@@ -31,7 +30,6 @@ public class Main {
 //Напишите программу, которая посчитает среднее значение трат за месяц (то есть сумму всех трат за месяц
 // поделить на количество недель), и выведите в консоль результат в формате: «Средняя сумма трат за месяц составила … рублей».
 //Важно помнить: подсчет среднего значения может иметь остаток, то есть быть не целым, а дробным числом.
-        int expensesMonth;
         double count = arr.length;
         double averageAmount = sum / count;
         System.out.println("Средняя сумма трат за месяц составила " + averageAmount + " рублей");
