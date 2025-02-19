@@ -43,10 +43,10 @@ public class Main {
 //В результате в консоль должно быть выведено: Ivanov Ivan.
 //Важно: не используйте дополнительные массивы для решения этой задачи. Необходимо корректно пройти по массиву циклом и
 // поменять его содержимое , чтобы установить правильный порядок.
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-            for (int i = reverseFullName.length-1; i >= 0; i--) {
-                char ch = reverseFullName[i];
-                System.out.print(ch);
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
+
         }
     }
 }
