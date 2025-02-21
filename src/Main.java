@@ -1,4 +1,5 @@
 import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 //Задача 1
@@ -35,16 +36,26 @@ public class Main {
         System.out.println("Средняя сумма трат за месяц составила " + averageAmount + " рублей");
 //Задача 4
 //В бухгалтерской книге появился баг. Что-то пошло не так: фамилии и имена сотрудников начали отображаться в обратную сторону.
-// Т. е. вместо «Иванов Иван» мы имеем «навИ вонавИ». Данные с именами сотрудников хранятся в виде массива символов char[ ]
+// т.е. в место «Иванов Иван» мы имеем «навИ вонавИ». Данные с именами сотрудников хранятся в виде массива символов char[ ]
 //Напишите код, который развернет содержимое массива, а затем распечатает его содержимое. В качестве данных для массива используйте:
 //char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 //В результате в консоль должно быть выведено: Ivanov Ivan.
 //Важно: не используйте дополнительные массивы для решения этой задачи. Необходимо корректно пройти по массиву циклом и
 // поменять его содержимое , чтобы установить правильный порядок.
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            char temp = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
+            reverseFullName[reverseFullName.length - 1 - i] = temp;
+
 
         }
+        System.out.println(reverseFullName);
+
+
+//        System.out.print(reverseFullNameNew);
+//           System.out.print(reverseFullName[i]);
+
+
     }
 }
